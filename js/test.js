@@ -285,10 +285,172 @@
 //   // Рейтинг
 //   console.log(book.rating);
 // }
-function multiply(...kaka) {
-  console.log(kaka); // масив усіх аргументів
-}
+// function multiply(...kaka) {
+//   console.log(kaka); // масив усіх аргументів
+// }
 
-// multiply(1, 2);
-// multiply(1, 2, 3);
-multiply(1, 2, 3, 4);
+// // multiply(1, 2);
+// // multiply(1, 2, 3);
+// // multiply(1, 2, 3, 4);
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+//   let total = 0;
+//   for (let product of products) {
+//     if (productName === product.name) {
+//       total = product.price * product.quantity;
+//     }
+//   }
+//   console.log(total);
+//   return total;
+
+//   // Change code above this line
+// }
+// calculateTotalPrice("kaka");
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
+
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+
+// // Chande code below this line
+// function makeMessage(pizzaName, callback) {
+//   return callback(pizzaName);
+// }
+// console.log(makeMessage("Royal Grand", makePizza));
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+
+//   order(pizzaName, onSuccess, onError) {
+//     if (!pizzaPalace.pizzas.includes(pizzaName)) {
+//       return onError(error);
+//     }
+//     return onSuccess(pizzaName);
+//   },
+// };
+// const LOW_SCORE = 50;
+// const HIGH_SCORE = 80;
+// const students = [
+//   { name: "Манго", score: 83 },
+//   { name: "Полі", score: 59 },
+//   { name: "Аякс", score: 37 },
+//   { name: "Ківі", score: 94 },
+//   { name: "Х'юстон", score: 64 },
+// ];
+
+// const best = students.filter((student) => student.score >= HIGH_SCORE);
+// console.log(best); // Масив об'єктів з іменами Манго і Ківі
+// const colorPickerOptions = [
+//   { label: "red", color: "#F44336" },
+//   { label: "green", color: "#4CAF50" },
+//   { label: "blue", color: "#2196F3" },
+//   { label: "pink", color: "#E91E63" },
+//   { label: "indigo", color: "#3F51B5" },
+// ];
+
+// console.log(colorPickerOptions.find((option) => option.label === "blue")); // { label: 'blue', color: '#2196F3' }
+// console.log(colorPickerOptions.find(({ label }) => label === "pink")); // { label: 'pink', color: '#E91E63' }
+// colorPickerOptions.find((option) => option.label === "white"); // undefined
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// // Пройдемо по всіх елементах колекції і додамо значення властивості tags
+// // до акумулятора, початкове значення якого вкажемо порожнім масивом [].
+// // На кожній ітерації пушимо в акумулятор усі елементи tweet.tags і повертаємо його.
+// const tags = tweets.reduce((allTags, tweet) => {
+//   allTags.push(...tweet.tags);
+
+//   return allTags;
+// }, []);
+
+// console.log(tags);
+const getActiveUsers = (users) => {
+  return users.filter((user) => user.isActive);
+};
+console.log(
+  getActiveUsers([
+    {
+      name: "Moore Hensley",
+      email: "moorehensley@indexia.com",
+      eyeColor: "blue",
+      friends: ["Sharron Pace"],
+      isActive: false,
+      balance: 2811,
+      gender: "male",
+      age: 37,
+    },
+    {
+      name: "Sharlene Bush",
+      email: "sharlenebush@tubesys.com",
+      eyeColor: "blue",
+      friends: ["Briana Decker", "Sharron Pace"],
+      isActive: true,
+      balance: 3821,
+      gender: "female",
+      age: 34,
+    },
+    {
+      name: "Ross Vazquez",
+      email: "rossvazquez@xinware.com",
+      eyeColor: "green",
+      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+      isActive: false,
+      balance: 3793,
+      gender: "male",
+      age: 24,
+    },
+    {
+      name: "Elma Head",
+      email: "elmahead@omatom.com",
+      eyeColor: "green",
+      friends: ["Goldie Gentry", "Aisha Tran"],
+      isActive: true,
+      balance: 2278,
+      gender: "female",
+      age: 21,
+    },
+    {
+      name: "Carey Barr",
+      email: "careybarr@nurali.com",
+      eyeColor: "blue",
+      friends: ["Jordan Sampson", "Eddie Strong"],
+      isActive: true,
+      balance: 3951,
+      gender: "male",
+      age: 27,
+    },
+    {
+      name: "Blackburn Dotson",
+      email: "blackburndotson@furnigeer.com",
+      eyeColor: "brown",
+      friends: ["Jacklyn Lucas", "Linda Chapman"],
+      isActive: false,
+      balance: 1498,
+      gender: "male",
+      age: 38,
+    },
+    {
+      name: "Sheree Anthony",
+      email: "shereeanthony@kog.com",
+      eyeColor: "brown",
+      friends: ["Goldie Gentry", "Briana Decker"],
+      isActive: true,
+      balance: 2764,
+      gender: "female",
+      age: 39,
+    },
+  ])
+);
