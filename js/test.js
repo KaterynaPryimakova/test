@@ -377,80 +377,334 @@
 // }, []);
 
 // console.log(tags);
-const getActiveUsers = (users) => {
-  return users.filter((user) => user.isActive);
-};
-console.log(
-  getActiveUsers([
-    {
-      name: "Moore Hensley",
-      email: "moorehensley@indexia.com",
-      eyeColor: "blue",
-      friends: ["Sharron Pace"],
-      isActive: false,
-      balance: 2811,
-      gender: "male",
-      age: 37,
-    },
-    {
-      name: "Sharlene Bush",
-      email: "sharlenebush@tubesys.com",
-      eyeColor: "blue",
-      friends: ["Briana Decker", "Sharron Pace"],
-      isActive: true,
-      balance: 3821,
-      gender: "female",
-      age: 34,
-    },
-    {
-      name: "Ross Vazquez",
-      email: "rossvazquez@xinware.com",
-      eyeColor: "green",
-      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-      isActive: false,
-      balance: 3793,
-      gender: "male",
-      age: 24,
-    },
-    {
-      name: "Elma Head",
-      email: "elmahead@omatom.com",
-      eyeColor: "green",
-      friends: ["Goldie Gentry", "Aisha Tran"],
-      isActive: true,
-      balance: 2278,
-      gender: "female",
-      age: 21,
-    },
-    {
-      name: "Carey Barr",
-      email: "careybarr@nurali.com",
-      eyeColor: "blue",
-      friends: ["Jordan Sampson", "Eddie Strong"],
-      isActive: true,
-      balance: 3951,
-      gender: "male",
-      age: 27,
-    },
-    {
-      name: "Blackburn Dotson",
-      email: "blackburndotson@furnigeer.com",
-      eyeColor: "brown",
-      friends: ["Jacklyn Lucas", "Linda Chapman"],
-      isActive: false,
-      balance: 1498,
-      gender: "male",
-      age: 38,
-    },
-    {
-      name: "Sheree Anthony",
-      email: "shereeanthony@kog.com",
-      eyeColor: "brown",
-      friends: ["Goldie Gentry", "Briana Decker"],
-      isActive: true,
-      balance: 2764,
-      gender: "female",
-      age: 39,
-    },
-  ])
-);
+// const getActiveUsers = (users) => {
+//   return users.filter((user) => user.isActive);
+// };
+// console.log(
+//   getActiveUsers([
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male",
+//       age: 37,
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female",
+//       age: 34,
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male",
+//       age: 24,
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female",
+//       age: 21,
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male",
+//       age: 27,
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male",
+//       age: 38,
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female",
+//       age: 39,
+//     },
+//   ])
+// );
+// Напишіть функцію checkKeyInObject(), яка приймає 2 параметри obj і key.
+// Функція буде перебирати об'єкт.
+// Якщо об'єкт має такий ключ - поверне true, в іншому випадку - false.
+
+// const user = {
+//   name: "Igor",
+//   car: "Mercedes",
+//   carColor: "black",
+// };
+// function checkKeyInObject(obj, key) {
+//   // return Object.key(obj).includes(key);
+//   return obj.hasOwnProperty(key);
+// }
+// console.log(checkKeyInObject(user, "name"));
+// console.log(checkKeyInObject(user, "id"));
+
+// Додати метод getinfo в об'єкт user, який повертатиме інформацію
+// про користувача у форматі:
+// `Name: Peter. Surname: Parker. Age: 22. Position: spider-man.`
+
+// const user = {
+//   name: "Peter",
+//   surname: "Parker",
+//   age: 22,
+//   position: "spider-man",
+// };
+// user.getinfo = function () {
+//   `Name: ${this.name} Peter. Surname: Parker. Age: 22. Position: spider-man.`;
+// };
+// const user2 = user;
+// user2.getinfo();
+
+// Створіть об'єкт calculator із трьома методами:
+//read(a, b) - приймає два аргументи та зберігає їх як властивості об'єкта
+//sum() - повертає суму збережених значень
+//mult() - перемножує збережені значення та повертає результат
+// const calculator = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   sum() {
+//     return this.a + this.b;
+//   },
+//   mult() {
+//     return this.a * this.b;
+//   },
+// };
+// calculator.read(2, 3);
+// console.log(calculator.sum());
+// console.log(calculator.mult());
+
+// Напишіть функцію updateObject, яка приймає об'єкт і ключі (ключів може бути довільна кількість)
+//які необхідно видалити з об'єкту.
+//Функція повертає новий об'єкт без зазначених параметрів.
+//Очікуваний результат ({a: 1, b: 2}, 'b') => {a: 1
+// const updateObject = (obj, ...keys) => {
+//   const newObj = { ...obj };
+//   console.log(keys);
+//   keys.forEach((el) => delete newObj[el]);
+//   return newObj;
+// };
+// console.log(updateObject({ a: 1, b: 2, c: 3, i: 5 }, "b", "a"));
+// console.log(updateObject({ a: 1, b: 2, c: 3, i: 5 }, "i", "c"));
+
+//  Напишіть функцію, яка приймає як параметр об'єкт
+//і повертає масив значень у форматі [[key, value], [key, value], ...]
+// де key і value - відповідно ключ і значення переданного об'екту.
+// const user = {
+//   name: "John",
+//   surName: "Stones",
+//   age: 20,
+//   hobby: "tenis",
+//   haveCar: true,
+//   merried: false,
+// };
+// function changeObject(object) {
+//   return Object.entries(object);
+// }
+// console.log(changeObject(user));
+
+// Напишіть функцію getPropertyValues(), яка приймає масив об'єктів
+// та ключ, і повертає масив значень цього ключа у кожному об'єкті
+
+// const myArr = [
+//   { name: "John", age: 30 },
+//   { name: "Jane", age: 25 },
+//   { name: "Bob", age: 40 },
+// ];
+// function getPropertyValues(array, key) {
+//   const result = array.map((el) => el[key]);
+//   return result;
+// }
+// console.log(getPropertyValues(myArr, "age"));
+
+// Виконайте сортування масиву цін за спаданням та зростанням.
+// const prices = [1000, 240, 670, 360, 89, 20];
+// const upPrices = [...prices].sort((a, b) => a - b);
+// console.log(upPrices);
+// const downPrices = [...prices].sort((a, b) => b - a);
+// console.log(downPrices);
+
+// Напишіть функцію sayHi(), яка приймає в якості параметра масив імен,
+// перебирає масив і додає до кожного ім'я привітання.
+// Функція повертає новий масив  ["Ivan привіт!", "Maria привіт!", "Anna привіт!"]
+
+// const names = ["Ivan", "Maria", "Anna"];
+// function sayHi(arr) {
+//   // return arr.map((el) => el + " привіт!");
+//   return arr.map((el) => `${el} привіт`);
+// }
+// console.log(sayHi(names));
+
+// Напишіть стрілочну функцію, яка буде перевіряти
+// чи містить даний масив, хоча б одне число більше 20.
+
+// const numbers = [20, 16, 11, 13, 15, 30];
+// const checkNumber = numbers.some((el) => el > 20);
+// console.log(checkNumber);
+
+// Напишіть стрілочну функцію яка буд перевіряти чи всі студенти
+// у нашому масиві старші 18 років.
+
+// const students = [
+//   { name: "Alex", age: 17 },
+//   { name: "Stas", age: 18 },
+//   { name: "Mike", age: 22 },
+//   { name: "Den", age: 20 },
+// ];
+// function checkAge() {
+//   const result = students.every((el) => el.age >= 18);
+//   return result;
+// }
+// console.log(checkAge());
+
+// function filterAge() {
+//   const result2 = students.filter((el) => el.age >= 18);
+//   return result2;
+// }
+// console.log(filterAge());
+
+// Зібрати в allTopics масив всіх предметів всіх курсів.
+//Виконати фільтрацію, залишивши в allTopics тільки унікальні елементи.
+
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Function",
+//       "Git",
+//       "Conditions",
+//       "Classes",
+//       "GitHub",
+//       "DOM",
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Git",
+//       "Promises",
+//       "AJAX",
+//       "GitHub",
+//     ],
+//   },
+// ];
+// const allTopics = courses
+//   .flatMap((course) => course.topics)
+//   .filter((course, index, array) => array.indexOf(course) === index);
+// console.log(allTopics);
+
+// у нас є масив користувачів, кожен з яких має поля id та name.
+//  Давайте знайдемо той де id = 1.
+
+// let users = [
+//   { id: 1, name: "John" },
+//   { id: 2, name: "Pete" },
+//   { id: 3, name: "Mary" },
+// ];
+// function checkId(obj) {
+//   const result = obj.find(() => user.id === 1);
+//   return result;
+// }
+// console.log(result);
+
+// const friends = [
+//   {
+//     passport: "03005988",
+//     name: "Joseph Francis Tribbiani Jr",
+//     age: 32,
+//     sex: "m",
+//   },
+//   { passport: "03005989", name: "Chandler Muriel Bing", age: 33, sex: "m" },
+//   { passport: "03005990", name: "Ross Eustace Geller", age: 33, sex: "m" },
+//   { passport: "03005991", name: "Rachel Karen Green", age: 31, sex: "f" },
+//   { passport: "03005992", name: "Monica Geller", age: 31, sex: "f" },
+//   { passport: "03005993", name: "Phoebe Buffay", age: 34, sex: "f" },
+// ];
+// Напишіть функцію getTotalBoysYears() яка порахує загальний вік хлопців.
+// function getTotalBoysYears(arr) {
+//   return arr
+//     .filter((friend) => friend.sex === "m")
+//     .reduce((acc, friend) => {
+//       return acc + friend.age;
+//     }, 0);
+// }
+// console.log(getTotalBoysYears(friends));
+
+// Маємо масив об'єктів, який представляє список замовлень:
+// Завдання: Перевірте, чи всі замовлення виконані, і поверніть список товарів з усіх виконаних замовлень.
+
+// const orders = [
+//   { id: 1, products: ["Milk", "Bread"], status: "completed" },
+//   { id: 2, products: ["Eggs", "Juice"], status: "processing" },
+//   { id: 3, products: ["Pasta", "Spices"], status: "completed" },
+// ];
+// const completed = orders.every((order) => order.status === "completed");
+// console.log(completed);
+
+// const arrayCompleted = orders
+//   .filter((oder) => oder.status === "completed")
+//   .flatMap((order) => order.products);
+// console.log(arrayCompleted);
+
+// маємо масив об'єктів, який представляє список товарів і їх цін:
+// Завдання: Знайдіть суму вартості всіх товарів, які коштують більше 10 гривень.
+// const products = [
+//   { name: "Milk", price: 20 },
+//   { name: "Bread", price: 10 },
+//   { name: "Eggs", price: 15 },
+//   { name: "cheese", price: 155 },
+//   { name: "juce", price: 45 },
+// ];
+// const sum = products
+//   .filter((product) => product.price > 10)
+//   .reduce((acc, product) => {
+//     return acc + product.price;
+//   }, 0);
+// console.log(sum);
