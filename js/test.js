@@ -958,4 +958,125 @@
 // checkBalance - метод для перевірки балансу.
 // Виводить повідомлення `Залишок на рахунку: 3100 грн.`
 
+// Створіть функцію createCounter(), яка при кожному виклику повертає
+// наступне число у послідовності(1, 2, 3, ...).Продемонструйте,
+// як замикання допомагає зберегти поточний стан лічильника між викликами функції.
+// function createCounter() {
+//     let counter = 0;
+//     return function () {
+//         return (counter += 1);
+//     };
+// }
+// const counter1 = createCounter();
+// const counter2 = createCounter();
 
+// console.log(counter1);
+
+// console.log(counter1());
+// console.log(counter1());
+// console.log(counter1());
+
+// console.log(counter2());
+// console.log(counter2());
+// console.log(counter2());
+
+// При натисканні на кнопку "SHOW ME", потрібно за допомогою alert
+// вивести значення, яке будемо вводити в інпут.
+
+// const btn = document.querySelector("#alertButton");
+// const input = document.querySelector("#alertInput");
+// btn.addEventListener("click", onClick);
+
+// function onClick() {
+//     alert(input.value);
+// }
+
+// При натисканні на кнопку "Приховати" потрібно введені користувачем
+// символи в інпут відображати у вигляді крапок замість звичайного
+// тексту, а також змінити назву кнопки на "Показати", при повторному
+// натисканні знову будемо відображати символи, а назва кнопки зміниться
+// на "Приховати".
+
+// const input = document.querySelector("#passwordInput");
+// const btn = document.querySelector("#passwordButton");
+// console.dir(input);
+// btn.addEventListener("click", onClick);
+
+// function onClick({ target }) {
+//     if (input.type === "text") {
+//         target.textContent = "Показати";
+//         input.type = "password";
+//         return;
+//     }
+//     input.type = "text";
+//     btn.textContent = "Приховати";
+// }
+
+// Кнопка "Зменшити" повинна зменшувати квадрат на 10 пікселів.
+// Кнопка "Збільшити" повинна збільшувати квадрат на 10 пікселів.
+// const btnDecrease = document.querySelector("#decrease");
+// const btnIncrease = document.querySelector("#increase");
+// const box = document.querySelector("#box");
+
+// btnDecrease.addEventListener("click", onClick);
+// btnIncrease.addEventListener("click", onClick);
+
+// console.dir(box);
+// function onClick({ target }) {
+//     const id = target.id;
+//     console.log(id);
+//     if (id === "decrease") {
+//         box.style.width = `${box.offsetWidth - 10}px`;
+//         box.style.height = `${box.offsetHeight - 10}px`;
+//     } else {
+//         box.style.width = `${box.offsetWidth + 10}px`;
+//         box.style.height = `${box.offsetHeight + 10}px`;
+//     }
+// }
+// offsetHeight
+// offsetWidth
+
+// При кліку на кнопку "Подвоїти" збільшувати значення в кожному
+// елементі списку в два рази.
+
+// const items = document.querySelectorAll(".listItem");
+// const btn = document.querySelector("#double");
+// btn.addEventListener("click", doubleItem);
+
+// function doubleItem() {
+//     return items.forEach((item) => {
+//         item.textContent *= 2;
+//     });
+// }
+
+// При кліку на кнопку "Filter" потрібно видалити з списку позначені елементи.
+// const checkboxForm = document.querySelector(".checkboxForm");
+// const checkboxWrapper = document.querySelectorAll(".checkboxWrapper");
+
+// checkboxForm.addEventListener("submit", filterCheckbox);
+
+// function filterCheckbox(event) {
+//     event.preventDefault();
+//     [...checkboxWrapper]
+//         .filter((elem) => elem.lastElementChild.checked)
+//         .forEach((el) => el.remove());
+// }
+
+// Наведено список людей. Зроби можливість фільтрації (пошуку) за ім'ям або за прізвищем.
+// const input = document.querySelector(".contactsFilter");
+// const list = document.querySelector(".contacts");
+
+// const items = [...list.children];
+// console.log(items);
+
+// input.addEventListener("input", searchName);
+
+// function searchName({ target }) {
+//     const filteredItems = items.filter((item) =>
+//         item.textContent.toLowerCase().includes(target.value)
+//     );
+//     list.innerHTML = "";
+//     list.append(...filteredItems);
+// }
+
+// Наведено список людей. Зроби можливість сортування списку за ім'ям та за прізвищем.
